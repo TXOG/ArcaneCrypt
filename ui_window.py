@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'windowrksKdr.ui'
+## Form generated from reading UI file 'windowPKJBGr.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.1
 ##
@@ -81,9 +81,33 @@ class Ui_MainWindow(object):
         self.createAccountErrorLabel.setFont(font2)
         self.createAccountErrorLabel.setAlignment(Qt.AlignCenter)
         self.stackedWidget.addWidget(self.signupScreen)
-        self.page_2 = QWidget()
-        self.page_2.setObjectName(u"page_2")
-        self.stackedWidget.addWidget(self.page_2)
+        self.loginScreen = QWidget()
+        self.loginScreen.setObjectName(u"loginScreen")
+        self.title_2 = QLabel(self.loginScreen)
+        self.title_2.setObjectName(u"title_2")
+        self.title_2.setGeometry(QRect(0, 0, 971, 161))
+        self.title_2.setFont(font)
+        self.title_2.setAlignment(Qt.AlignCenter)
+        self.label_4 = QLabel(self.loginScreen)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setGeometry(QRect(0, 120, 971, 81))
+        self.label_4.setFont(font1)
+        self.label_4.setAlignment(Qt.AlignCenter)
+        self.label_5 = QLabel(self.loginScreen)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setGeometry(QRect(320, 310, 191, 41))
+        self.label_5.setFont(font2)
+        self.loginInput = QLineEdit(self.loginScreen)
+        self.loginInput.setObjectName(u"loginInput")
+        self.loginInput.setGeometry(QRect(560, 310, 271, 41))
+        self.loginInput.setEchoMode(QLineEdit.Password)
+        self.loginButton = QPushButton(self.loginScreen)
+        self.loginButton.setObjectName(u"loginButton")
+        self.loginButton.setGeometry(QRect(360, 480, 271, 111))
+        self.loginButton.setFont(font3)
+        self.loginButton.setMouseTracking(False)
+        self.loginButton.setFocusPolicy(Qt.StrongFocus)
+        self.stackedWidget.addWidget(self.loginScreen)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -103,5 +127,11 @@ class Ui_MainWindow(object):
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Confirm Password:", None))
         self.createAccountButton.setText(QCoreApplication.translate("MainWindow", u"Create", None))
         self.createAccountErrorLabel.setText("")
+        self.title_2.setText(QCoreApplication.translate("MainWindow", u"LockWarden", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Login to your account to view the contents of your Vaults", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Password:", None))
+        self.loginInput.setInputMask("")
+        self.loginInput.setText("")
+        self.loginButton.setText(QCoreApplication.translate("MainWindow", u"Login", None))
     # retranslateUi
 

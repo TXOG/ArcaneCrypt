@@ -28,8 +28,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.ui = Ui_MainWindow()
 
         if exists('setupdone.ivd'):
-            self.stackedWidget.setCurrentWidget(self.page_2)
-
+            self.stackedWidget.setCurrentWidget(self.loginScreen)
 
         self.createAccountButton.clicked.connect(self.createAccount)
 
@@ -47,7 +46,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             file = open('openfile.ivd', 'w+')
             file.write("NONE")
             file.close()
-            self.stackedWidget.setCurrentWidget(self.page_2)
+            self.stackedWidget.setCurrentWidget(self.loginScreen)
         else:
             self.createAccountErrorLabel.setText("Passwords don't match")
 
