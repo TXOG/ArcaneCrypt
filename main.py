@@ -31,8 +31,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.stackedWidget.setCurrentWidget(self.loginScreen)
 
         self.createAccountButton.clicked.connect(self.createAccount)
+        self.loginButton.clicked.connect(self.login)
 
     def createAccount(self):
+        if not self.passwordInput.text():
+            self.createAccountErrorLabel.setText("Password can't be empty")
+            return
         if self.passwordInput.text() == self.checkPasswordInput.text():
             password = self.passwordInput.text()
             password = password.encode('utf-8')
@@ -49,6 +53,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.stackedWidget.setCurrentWidget(self.loginScreen)
         else:
             self.createAccountErrorLabel.setText("Passwords don't match")
+
+    def login(self):
+        file = open('password.ivp', 'r')
+        checkhash = file.read()
+        file.close()
+        passwordcheck = hashlib.sha512(self.loginInput.text().encode('utf-8')).hexdigest()
+        if str(passwordcheck) == str(checkhash):
+            self.stackedWidget.setCurrentWidget(self.mainScreen)
+        else:
+            self.loginErrorLabel.setText("Incorrect password")
 
 
 if __name__ == "__main__":

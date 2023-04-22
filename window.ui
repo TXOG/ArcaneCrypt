@@ -40,7 +40,7 @@
        </font>
       </property>
       <property name="text">
-       <string>LockWarden</string>
+       <string>ArcaneCrypt</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -78,6 +78,41 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">    QLineEdit {
+        font-family: Segoe UI;
+        font-size: 9pt;
+        border-radius: 4px;
+    }
+    
+    QLineEdit {
+        background-color: #ffffff;
+    }
+    
+    QLineEdit {
+        color: #000000;
+    }
+    
+    QLineEdit {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #c9c9c9;
+    }
+    
+    QLineEdit {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    QLineEdit:hover, QLineEdit:focus {
+        background-color: #f2f2f2;
+    }
+
+    QLineEdit::selection {
+        background-color: #0078d7;
+        color: #ffffff;
+    }</string>
+      </property>
       <property name="inputMask">
        <string/>
       </property>
@@ -96,6 +131,41 @@
         <width>271</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    QLineEdit {
+        font-family: Segoe UI;
+        font-size: 9pt;
+        border-radius: 4px;
+    }
+    
+    QLineEdit {
+        background-color: #ffffff;
+    }
+    
+    QLineEdit {
+        color: #000000;
+    }
+    
+    QLineEdit {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #c9c9c9;
+    }
+    
+    QLineEdit {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    QLineEdit:hover, QLineEdit:focus {
+        background-color: #f2f2f2;
+    }
+
+    QLineEdit::selection {
+        background-color: #0078d7;
+        color: #ffffff;
+    }</string>
       </property>
       <property name="inputMask">
        <string/>
@@ -154,16 +224,48 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
-        <bold>false</bold>
+        <family>Segoe UI</family>
+        <pointsize>18</pointsize>
+        <bold>true</bold>
         <stylestrategy>PreferDefault</stylestrategy>
        </font>
       </property>
       <property name="mouseTracking">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
       <property name="focusPolicy">
        <enum>Qt::StrongFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    QPushButton {
+        font-family: Segoe UI;
+        font-size: 18pt;
+        font-weight: bold;
+        color: #ffffff;
+        border-radius: 8px;
+        padding: 6px 12px;
+    }
+    
+    QPushButton {
+        background-color: #808080;
+        background-image: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #808080, stop:1 #4d4d4d);
+    }
+    
+    QPushButton {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #808080;
+    }
+    
+    QPushButton:hover, QPushButton:focus {
+        background-color: #4d4d4d;
+        background-image: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #4d4d4d, stop:1 #2e2e2e);
+    }
+
+    QPushButton:pressed {
+        background-color: #2e2e2e;
+        background-image: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2e2e2e, stop:1 #1c1c1c);
+    }</string>
       </property>
       <property name="text">
        <string>Create</string>
@@ -208,7 +310,7 @@
        </font>
       </property>
       <property name="text">
-       <string>LockWarden</string>
+       <string>ArcaneCrypt</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -264,6 +366,41 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">    QLineEdit {
+        font-family: Segoe UI;
+        font-size: 9pt;
+        border-radius: 4px;
+    }
+    
+    QLineEdit {
+        background-color: #ffffff;
+    }
+    
+    QLineEdit {
+        color: #000000;
+    }
+    
+    QLineEdit {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #c9c9c9;
+    }
+    
+    QLineEdit {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    QLineEdit:hover, QLineEdit:focus {
+        background-color: #f2f2f2;
+    }
+
+    QLineEdit::selection {
+        background-color: #0078d7;
+        color: #ffffff;
+    }</string>
+      </property>
       <property name="inputMask">
        <string/>
       </property>
@@ -285,22 +422,76 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
-        <bold>false</bold>
+        <family>Segoe UI</family>
+        <pointsize>18</pointsize>
+        <bold>true</bold>
         <stylestrategy>PreferDefault</stylestrategy>
        </font>
       </property>
       <property name="mouseTracking">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
       <property name="focusPolicy">
        <enum>Qt::StrongFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">    QPushButton {
+        font-family: Segoe UI;
+        font-size: 18pt;
+        font-weight: bold;
+        color: #ffffff;
+        border-radius: 8px;
+        padding: 6px 12px;
+    }
+    
+    QPushButton {
+        background-color: #808080;
+        background-image: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #808080, stop:1 #4d4d4d);
+    }
+    
+    QPushButton {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #808080;
+    }
+    
+    QPushButton:hover, QPushButton:focus {
+        background-color: #4d4d4d;
+        background-image: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #4d4d4d, stop:1 #2e2e2e);
+    }
+
+    QPushButton:pressed {
+        background-color: #2e2e2e;
+        background-image: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2e2e2e, stop:1 #1c1c1c);
+    }</string>
       </property>
       <property name="text">
        <string>Login</string>
       </property>
      </widget>
+     <widget class="QLabel" name="loginErrorLabel">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>600</y>
+        <width>261</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
     </widget>
+    <widget class="QWidget" name="mainScreen"/>
    </widget>
   </widget>
  </widget>
