@@ -1,5 +1,5 @@
 # ArcaneCrypt
-ArcaneCrypt is a desktop application that provides encrypted file storage. It creates an encrypted "vault" that securely stores your files.
+ArcaneCrypt is a desktop application that provides encrypted file storage. It creates an encrypted "vault" that securely stores your files. 
 
 ## Features
 
@@ -19,3 +19,5 @@ Some tips:
 ## Credits
 
 Developer - Thomas Kerby
+
+Powered by [IncVault](https://github.com/TXOG/inc-vault)
