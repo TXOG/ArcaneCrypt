@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>407</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="title">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>401</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>26</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>ArcaneCrypt</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>50</y>
+     <width>401</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Create a new Vault here</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>130</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Name:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="createVaultNameInput">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>130</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">    QLineEdit {
+        font-family: Segoe UI;
+        font-size: 9pt;
+        border-radius: 4px;
+    }
+    
+    QLineEdit {
+        background-color: #ffffff;
+    }
+    
+    QLineEdit {
+        color: #000000;
+    }
+    
+    QLineEdit {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #c9c9c9;
+    }
+    
+    QLineEdit {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    QLineEdit:hover, QLineEdit:focus {
+        background-color: #f2f2f2;
+    }
+
+    QLineEdit::selection {
+        background-color: #0078d7;
+        color: #ffffff;
+    }</string>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
+   <property name="text">
+    <string extracomment="password"/>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Normal</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="createVaultFinalButton">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>210</y>
+     <width>171</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    font-family: Segoe UI;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #808080;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #808080;
+    padding: 6px 12px;
+}
+
+QPushButton:hover {
+    background-color: #4d4d4d;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 1 #2e2e2e);
+}
+
+QPushButton:pressed {
+    background-color: #2e2e2e;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2e2e2e, stop: 1 #1c1c1c);
+}
+
+QPushButton:!hover:!pressed {
+    background-color: #808080;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);
+}</string>
+   </property>
+   <property name="text">
+    <string>Create</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -8,7 +8,7 @@ from PySide6.QtWidgets import *
 from PySide6.QtGui import *
 from PySide6.QtWebEngineCore import *
 from PySide6.QtNetwork import QNetworkCookieJar, QNetworkCookie
-from PySide6.QtWidgets import QApplication, QMainWindow, QGraphicsDropShadowEffect
+from PySide6.QtWidgets import QApplication, QMainWindow, QGraphicsDropShadowEffect, QDialog
 from PySide6.QtCore import Qt, QPoint, QRect
 from PySide6 import QtWidgets
 from PySide6.QtWebEngineWidgets import QWebEngineView
@@ -16,6 +16,7 @@ from PySide6.QtCore import QByteArray
 from PySide6.QtCore import QDir
 
 from ui_window import Ui_MainWindow
+from ui_createvault import Ui_Dialog
 
 import hashlib
 from os.path import exists
@@ -30,6 +31,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # Create an instance of the UI from ui_window.py
         self.ui = Ui_MainWindow()
 
+
         self.vaultStack.removeWidget(self.page)
         self.page.deleteLater()
         self.vaultStack.removeWidget(self.page_2)
@@ -40,6 +42,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         self.createAccountButton.clicked.connect(self.createAccount)
         self.loginButton.clicked.connect(self.login)
+        self.createVaultButton.clicked.connect(self.openCreateVaultWindow)
 
         vault_dir = QDir.currentPath() + "/Vaults"
         vault_folders = [f for f in os.listdir(vault_dir) if os.path.isdir(os.path.join(vault_dir, f))]
@@ -103,8 +106,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 pass
             time.sleep(0.2)
 
+    def openCreateVaultWindow(self):
+        dialog = QDialog()
+        ui = Ui_Dialog()
+        ui.setupUi(dialog)
+        dialog.setWindowTitle("ArcaneCrypt")
+        dialog.exec()
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
+    window.setWindowTitle('ArcaneCrypt')
     window.show()
     sys.exit(app.exec())
