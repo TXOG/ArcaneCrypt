@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>407</width>
-    <height>300</height>
+    <height>314</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -172,6 +172,27 @@ QPushButton:!hover:!pressed {
    </property>
    <property name="text">
     <string>Create</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="createVaultErrorLabel">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>270</y>
+     <width>401</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>

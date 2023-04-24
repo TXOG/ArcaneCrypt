@@ -106,16 +106,39 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 pass
             time.sleep(0.2)
 
+
+
     def openCreateVaultWindow(self):
-        dialog = QDialog()
-        ui = Ui_Dialog()
-        ui.setupUi(dialog)
-        dialog.setWindowTitle("ArcaneCrypt")
-        dialog.exec()
+        global vaultWindow
+        vaultWindow = CreateVault()
+        vaultWindow.show()
+        return vaultWindow
+
+
+class CreateVault(QMainWindow, Ui_Dialog):
+    def __init__(self, parent=None, *args, obj=None, **kwargs):
+        super(CreateVault, self).__init__(parent=parent, *args, **kwargs)
+        self.setupUi(self)
+
+        self.setWindowTitle("ArcaneCrypt")
+
+        self.createVaultFinalButton.clicked.connect(self.createVault)
+
+    def createVault(self):
+        checkDir = ('Vaults/' + self.createVaultNameInput.text() + '/')
+        if not os.path.isdir(checkDir):
+            try:
+                os.mkdir(checkDir)
+                self.createVaultErrorLabel.setText('Vault "' + self.createVaultNameInput.text() + '" created')
+            except Exception as e:
+                self.createVaultErrorLabel.setText("Error " + e)
+        else:
+            self.createVaultErrorLabel.setText("Vault name already exists")
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
-    window.setWindowTitle('ArcaneCrypt')
+    window.setWindowTitle("ArcaneCrypt")
     window.show()
     sys.exit(app.exec())

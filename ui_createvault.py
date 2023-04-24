@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'createvaultNObAcZ.ui'
+## Form generated from reading UI file 'createvaulttMhZoj.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.1
 ##
@@ -22,7 +22,7 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
-        Dialog.resize(407, 300)
+        Dialog.resize(407, 314)
         self.title = QLabel(Dialog)
         self.title.setObjectName(u"title")
         self.title.setGeometry(QRect(0, 0, 401, 71))
@@ -113,6 +113,11 @@ class Ui_Dialog(object):
 "    background-color: #808080;\n"
 "    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);\n"
 "}")
+        self.createVaultErrorLabel = QLabel(Dialog)
+        self.createVaultErrorLabel.setObjectName(u"createVaultErrorLabel")
+        self.createVaultErrorLabel.setGeometry(QRect(0, 270, 401, 41))
+        self.createVaultErrorLabel.setFont(font2)
+        self.createVaultErrorLabel.setAlignment(Qt.AlignCenter)
 
         self.retranslateUi(Dialog)
 
@@ -127,5 +132,6 @@ class Ui_Dialog(object):
         self.createVaultNameInput.setInputMask("")
         self.createVaultNameInput.setText("")
         self.createVaultFinalButton.setText(QCoreApplication.translate("Dialog", u"Create", None))
+        self.createVaultErrorLabel.setText("")
     # retranslateUi
 
