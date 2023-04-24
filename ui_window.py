@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'windowxDvxcQ.ui'
+## Form generated from reading UI file 'windowPMfHFp.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.1
 ##
@@ -143,35 +143,34 @@ class Ui_MainWindow(object):
         self.createAccountButton.setFont(font3)
         self.createAccountButton.setMouseTracking(True)
         self.createAccountButton.setFocusPolicy(Qt.StrongFocus)
-        self.createAccountButton.setStyleSheet(u"    QPushButton {\n"
-"        font-family: Segoe UI;\n"
-"        font-size: 18pt;\n"
-"        font-weight: bold;\n"
-"        color: #ffffff;\n"
-"        border-radius: 8px;\n"
-"        padding: 6px 12px;\n"
-"    }\n"
-"    \n"
-"    QPushButton {\n"
-"        background-color: #808080;\n"
-"        background-image: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #808080, stop:1 #4d4d4d);\n"
-"    }\n"
-"    \n"
-"    QPushButton {\n"
-"        border-style: solid;\n"
-"        border-width: 1px;\n"
-"        border-color: #808080;\n"
-"    }\n"
-"    \n"
-"    QPushButton:hover, QPushButton:focus {\n"
-"        background-color: #4d4d4d;\n"
-"        background-image: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #4d4d4d, stop:1 #2e2e2e);\n"
-"    }\n"
+        self.createAccountButton.setStyleSheet(u"QPushButton {\n"
+"    font-family: Segoe UI;\n"
+"    font-size: 18pt;\n"
+"    font-weight: bold;\n"
+"    color: #ffffff;\n"
+"    background-color: #808080;\n"
+"    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);\n"
+"    border-radius: 8px;\n"
+"    border-style: solid;\n"
+"    border-width: 1px;\n"
+"    border-color: #808080;\n"
+"    padding: 6px 12px;\n"
+"}\n"
 "\n"
-"    QPushButton:pressed {\n"
-"        background-color: #2e2e2e;\n"
-"        background-image: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2e2e2e, stop:1 #1c1c1c);\n"
-"    }")
+"QPushButton:hover {\n"
+"    background-color: #4d4d4d;\n"
+"    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 1 #2e2e2e);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #2e2e2e;\n"
+"    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2e2e2e, stop: 1 #1c1c1c);\n"
+"}\n"
+"\n"
+"QPushButton:!hover:!pressed {\n"
+"    background-color: #808080;\n"
+"    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);\n"
+"}")
         self.createAccountErrorLabel = QLabel(self.signupScreen)
         self.createAccountErrorLabel.setObjectName(u"createAccountErrorLabel")
         self.createAccountErrorLabel.setGeometry(QRect(370, 600, 261, 41))
@@ -237,35 +236,34 @@ class Ui_MainWindow(object):
         self.loginButton.setFont(font3)
         self.loginButton.setMouseTracking(True)
         self.loginButton.setFocusPolicy(Qt.StrongFocus)
-        self.loginButton.setStyleSheet(u"    QPushButton {\n"
-"        font-family: Segoe UI;\n"
-"        font-size: 18pt;\n"
-"        font-weight: bold;\n"
-"        color: #ffffff;\n"
-"        border-radius: 8px;\n"
-"        padding: 6px 12px;\n"
-"    }\n"
-"    \n"
-"    QPushButton {\n"
-"        background-color: #808080;\n"
-"        background-image: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #808080, stop:1 #4d4d4d);\n"
-"    }\n"
-"    \n"
-"    QPushButton {\n"
-"        border-style: solid;\n"
-"        border-width: 1px;\n"
-"        border-color: #808080;\n"
-"    }\n"
-"    \n"
-"    QPushButton:hover, QPushButton:focus {\n"
-"        background-color: #4d4d4d;\n"
-"        background-image: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #4d4d4d, stop:1 #2e2e2e);\n"
-"    }\n"
+        self.loginButton.setStyleSheet(u"QPushButton {\n"
+"    font-family: Segoe UI;\n"
+"    font-size: 18pt;\n"
+"    font-weight: bold;\n"
+"    color: #ffffff;\n"
+"    background-color: #808080;\n"
+"    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);\n"
+"    border-radius: 8px;\n"
+"    border-style: solid;\n"
+"    border-width: 1px;\n"
+"    border-color: #808080;\n"
+"    padding: 6px 12px;\n"
+"}\n"
 "\n"
-"    QPushButton:pressed {\n"
-"        background-color: #2e2e2e;\n"
-"        background-image: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2e2e2e, stop:1 #1c1c1c);\n"
-"    }")
+"QPushButton:hover {\n"
+"    background-color: #4d4d4d;\n"
+"    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 1 #2e2e2e);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #2e2e2e;\n"
+"    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2e2e2e, stop: 1 #1c1c1c);\n"
+"}\n"
+"\n"
+"QPushButton:!hover:!pressed {\n"
+"    background-color: #808080;\n"
+"    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);\n"
+"}")
         self.loginErrorLabel = QLabel(self.loginScreen)
         self.loginErrorLabel.setObjectName(u"loginErrorLabel")
         self.loginErrorLabel.setGeometry(QRect(370, 600, 261, 41))
@@ -317,17 +315,79 @@ class Ui_MainWindow(object):
 "        selection-background-color: #0078d7;\n"
 "        selection-color: #ffffff;\n"
 "    }")
+        self.createVaultButton = QPushButton(self.menuWidget)
+        self.createVaultButton.setObjectName(u"createVaultButton")
+        self.createVaultButton.setGeometry(QRect(224, 13, 131, 31))
+        self.createVaultButton.setStyleSheet(u"QPushButton {\n"
+"    font-family: Segoe UI;\n"
+"    font-size: 12pt;\n"
+"    font-weight: bold;\n"
+"    color: #ffffff;\n"
+"    background-color: #808080;\n"
+"    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);\n"
+"    border-radius: 8px;\n"
+"    border-style: solid;\n"
+"    border-width: 1px;\n"
+"    border-color: #808080;\n"
+"    padding: 6px 12px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #4d4d4d;\n"
+"    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 1 #2e2e2e);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #2e2e2e;\n"
+"    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2e2e2e, stop: 1 #1c1c1c);\n"
+"}\n"
+"\n"
+"QPushButton:!hover:!pressed {\n"
+"    background-color: #808080;\n"
+"    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);\n"
+"}")
+        self.addVaultButton = QPushButton(self.menuWidget)
+        self.addVaultButton.setObjectName(u"addVaultButton")
+        self.addVaultButton.setGeometry(QRect(380, 13, 131, 31))
+        self.addVaultButton.setStyleSheet(u"QPushButton {\n"
+"    font-family: Segoe UI;\n"
+"    font-size: 12pt;\n"
+"    font-weight: bold;\n"
+"    color: #ffffff;\n"
+"    background-color: #808080;\n"
+"    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);\n"
+"    border-radius: 8px;\n"
+"    border-style: solid;\n"
+"    border-width: 1px;\n"
+"    border-color: #808080;\n"
+"    padding: 6px 12px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #4d4d4d;\n"
+"    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 1 #2e2e2e);\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #2e2e2e;\n"
+"    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2e2e2e, stop: 1 #1c1c1c);\n"
+"}\n"
+"\n"
+"QPushButton:!hover:!pressed {\n"
+"    background-color: #808080;\n"
+"    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);\n"
+"}")
         self.vaultStack = QStackedWidget(self.mainScreen)
         self.vaultStack.setObjectName(u"vaultStack")
         self.vaultStack.setGeometry(QRect(0, 49, 971, 621))
         self.page = QWidget()
-        self.page.setObjectName(u"test2")
+        self.page.setObjectName(u"page")
         self.label_6 = QLabel(self.page)
         self.label_6.setObjectName(u"label_6")
         self.label_6.setGeometry(QRect(380, 290, 151, 61))
         self.vaultStack.addWidget(self.page)
         self.page_2 = QWidget()
-        self.page_2.setObjectName(u"test3")
+        self.page_2.setObjectName(u"page_2")
         self.label_7 = QLabel(self.page_2)
         self.label_7.setObjectName(u"label_7")
         self.label_7.setGeometry(QRect(410, 320, 101, 51))
@@ -336,6 +396,9 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
+
+        self.vaultStack.setCurrentIndex(1)
+
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
@@ -360,6 +423,8 @@ class Ui_MainWindow(object):
         self.loginButton.setText(QCoreApplication.translate("MainWindow", u"Login", None))
         self.loginErrorLabel.setText("")
         self.vaultList.setCurrentText("")
+        self.createVaultButton.setText(QCoreApplication.translate("MainWindow", u"Create", None))
+        self.addVaultButton.setText(QCoreApplication.translate("MainWindow", u"Add", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Page1", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"page2", None))
     # retranslateUi

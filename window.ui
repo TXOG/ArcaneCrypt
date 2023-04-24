@@ -237,35 +237,34 @@
        <enum>Qt::StrongFocus</enum>
       </property>
       <property name="styleSheet">
-       <string notr="true">    QPushButton {
-        font-family: Segoe UI;
-        font-size: 18pt;
-        font-weight: bold;
-        color: #ffffff;
-        border-radius: 8px;
-        padding: 6px 12px;
-    }
-    
-    QPushButton {
-        background-color: #808080;
-        background-image: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #808080, stop:1 #4d4d4d);
-    }
-    
-    QPushButton {
-        border-style: solid;
-        border-width: 1px;
-        border-color: #808080;
-    }
-    
-    QPushButton:hover, QPushButton:focus {
-        background-color: #4d4d4d;
-        background-image: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #4d4d4d, stop:1 #2e2e2e);
-    }
+       <string notr="true">QPushButton {
+    font-family: Segoe UI;
+    font-size: 18pt;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #808080;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #808080;
+    padding: 6px 12px;
+}
 
-    QPushButton:pressed {
-        background-color: #2e2e2e;
-        background-image: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2e2e2e, stop:1 #1c1c1c);
-    }</string>
+QPushButton:hover {
+    background-color: #4d4d4d;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 1 #2e2e2e);
+}
+
+QPushButton:pressed {
+    background-color: #2e2e2e;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2e2e2e, stop: 1 #1c1c1c);
+}
+
+QPushButton:!hover:!pressed {
+    background-color: #808080;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);
+}</string>
       </property>
       <property name="text">
        <string>Create</string>
@@ -435,35 +434,34 @@
        <enum>Qt::StrongFocus</enum>
       </property>
       <property name="styleSheet">
-       <string notr="true">    QPushButton {
-        font-family: Segoe UI;
-        font-size: 18pt;
-        font-weight: bold;
-        color: #ffffff;
-        border-radius: 8px;
-        padding: 6px 12px;
-    }
-    
-    QPushButton {
-        background-color: #808080;
-        background-image: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #808080, stop:1 #4d4d4d);
-    }
-    
-    QPushButton {
-        border-style: solid;
-        border-width: 1px;
-        border-color: #808080;
-    }
-    
-    QPushButton:hover, QPushButton:focus {
-        background-color: #4d4d4d;
-        background-image: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #4d4d4d, stop:1 #2e2e2e);
-    }
+       <string notr="true">QPushButton {
+    font-family: Segoe UI;
+    font-size: 18pt;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #808080;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #808080;
+    padding: 6px 12px;
+}
 
-    QPushButton:pressed {
-        background-color: #2e2e2e;
-        background-image: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2e2e2e, stop:1 #1c1c1c);
-    }</string>
+QPushButton:hover {
+    background-color: #4d4d4d;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 1 #2e2e2e);
+}
+
+QPushButton:pressed {
+    background-color: #2e2e2e;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2e2e2e, stop: 1 #1c1c1c);
+}
+
+QPushButton:!hover:!pressed {
+    background-color: #808080;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);
+}</string>
       </property>
       <property name="text">
        <string>Login</string>
@@ -552,6 +550,92 @@
         <string/>
        </property>
       </widget>
+      <widget class="QPushButton" name="createVaultButton">
+       <property name="geometry">
+        <rect>
+         <x>224</x>
+         <y>13</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    font-family: Segoe UI;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #808080;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #808080;
+    padding: 6px 12px;
+}
+
+QPushButton:hover {
+    background-color: #4d4d4d;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 1 #2e2e2e);
+}
+
+QPushButton:pressed {
+    background-color: #2e2e2e;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2e2e2e, stop: 1 #1c1c1c);
+}
+
+QPushButton:!hover:!pressed {
+    background-color: #808080;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);
+}</string>
+       </property>
+       <property name="text">
+        <string>Create</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="addVaultButton">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>13</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    font-family: Segoe UI;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #808080;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #808080;
+    padding: 6px 12px;
+}
+
+QPushButton:hover {
+    background-color: #4d4d4d;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 1 #2e2e2e);
+}
+
+QPushButton:pressed {
+    background-color: #2e2e2e;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2e2e2e, stop: 1 #1c1c1c);
+}
+
+QPushButton:!hover:!pressed {
+    background-color: #808080;
+    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);
+}</string>
+       </property>
+       <property name="text">
+        <string>Add</string>
+       </property>
+      </widget>
      </widget>
      <widget class="QStackedWidget" name="vaultStack">
       <property name="geometry">
@@ -561,6 +645,9 @@
         <width>971</width>
         <height>621</height>
        </rect>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
       </property>
       <widget class="QWidget" name="page">
        <widget class="QLabel" name="label_6">
