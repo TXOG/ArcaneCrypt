@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'windowwDdPIl.ui'
+## Form generated from reading UI file 'windowxDvxcQ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.1
 ##
@@ -15,8 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QLineEdit, QMainWindow,
-    QPushButton, QSizePolicy, QStackedWidget, QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QLabel, QLineEdit,
+    QMainWindow, QPushButton, QSizePolicy, QStackedWidget,
+    QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -273,6 +274,64 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.loginScreen)
         self.mainScreen = QWidget()
         self.mainScreen.setObjectName(u"mainScreen")
+        self.menuWidget = QWidget(self.mainScreen)
+        self.menuWidget.setObjectName(u"menuWidget")
+        self.menuWidget.setGeometry(QRect(0, 0, 971, 51))
+        self.vaultList = QComboBox(self.menuWidget)
+        self.vaultList.setObjectName(u"vaultList")
+        self.vaultList.setGeometry(QRect(10, 10, 191, 31))
+        self.vaultList.setStyleSheet(u"/* Set the font family and size */\n"
+"    QComboBox {\n"
+"        font-family: Segoe UI;\n"
+"        font-size: 9pt;\n"
+"        font-weight: bold;\n"
+"        color: #000000;\n"
+"        border-radius: 4px;\n"
+"        padding: 2px 20px 2px 6px;\n"
+"        border: 1px solid #c9c9c9;\n"
+"        background-color: #ffffff;\n"
+"        selection-background-color: #0078d7;\n"
+"        selection-color: #ffffff;\n"
+"    }\n"
+"    \n"
+"    /* Set the background color and gradient */\n"
+"    QComboBox::drop-down {\n"
+"        background-color: #f2f2f2;\n"
+"        border: 1px solid #c9c9c9;\n"
+"        border-top-right-radius: 4px;\n"
+"        border-bottom-right-radius: 4px;\n"
+"        width: 20px;\n"
+"    }\n"
+"    \n"
+"    /* Set the hover and focus background color */\n"
+"    QComboBox:hover, QComboBox:focus {\n"
+"        background-color: #f2f2f2;\n"
+"        border: 1px solid #0078d7;\n"
+"    }\n"
+"    \n"
+"    /* Set the background color and gradient of the dropdown menu */\n"
+"    QComboBox QAbstractItemVi"
+                        "ew {\n"
+"        background-color: #ffffff;\n"
+"        border: 1px solid #c9c9c9;\n"
+"        selection-background-color: #0078d7;\n"
+"        selection-color: #ffffff;\n"
+"    }")
+        self.vaultStack = QStackedWidget(self.mainScreen)
+        self.vaultStack.setObjectName(u"vaultStack")
+        self.vaultStack.setGeometry(QRect(0, 49, 971, 621))
+        self.page = QWidget()
+        self.page.setObjectName(u"test2")
+        self.label_6 = QLabel(self.page)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setGeometry(QRect(380, 290, 151, 61))
+        self.vaultStack.addWidget(self.page)
+        self.page_2 = QWidget()
+        self.page_2.setObjectName(u"test3")
+        self.label_7 = QLabel(self.page_2)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setGeometry(QRect(410, 320, 101, 51))
+        self.vaultStack.addWidget(self.page_2)
         self.stackedWidget.addWidget(self.mainScreen)
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -300,5 +359,8 @@ class Ui_MainWindow(object):
         self.loginInput.setText("")
         self.loginButton.setText(QCoreApplication.translate("MainWindow", u"Login", None))
         self.loginErrorLabel.setText("")
+        self.vaultList.setCurrentText("")
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Page1", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"page2", None))
     # retranslateUi
 

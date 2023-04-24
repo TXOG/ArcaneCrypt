@@ -1,5 +1,7 @@
 import os
 import sys
+import time
+
 from PySide6 import QtCore
 from PySide6.QtCore import *
 from PySide6.QtWidgets import *
@@ -8,15 +10,16 @@ from PySide6.QtWebEngineCore import *
 from PySide6.QtNetwork import QNetworkCookieJar, QNetworkCookie
 from PySide6.QtWidgets import QApplication, QMainWindow, QGraphicsDropShadowEffect
 from PySide6.QtCore import Qt, QPoint, QRect
-import sys
 from PySide6 import QtWidgets
-import threading
-from ui_window import Ui_MainWindow
 from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtCore import QByteArray
+from PySide6.QtCore import QDir
+
+from ui_window import Ui_MainWindow
 
 import hashlib
 from os.path import exists
+import threading
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -27,11 +30,30 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # Create an instance of the UI from ui_window.py
         self.ui = Ui_MainWindow()
 
+        self.vaultStack.removeWidget(self.page)
+        self.page.deleteLater()
+        self.vaultStack.removeWidget(self.page_2)
+        self.page_2.deleteLater()
+
         if exists('setupdone.ivd'):
             self.stackedWidget.setCurrentWidget(self.loginScreen)
 
         self.createAccountButton.clicked.connect(self.createAccount)
         self.loginButton.clicked.connect(self.login)
+
+        vault_dir = QDir.currentPath() + "/Vaults"
+        vault_folders = [f for f in os.listdir(vault_dir) if os.path.isdir(os.path.join(vault_dir, f))]
+
+        for folder_name in vault_folders:
+            folder_path = os.path.join(vault_dir, folder_name)
+            self.vaultList.addItem(folder_name)
+            newPage = QWidget()
+            newPage.setObjectName(f"{folder_name}")
+            self.vaultStack.addWidget(newPage)
+            newLabel = QLabel(folder_name, parent=newPage)
+            newLabel.setGeometry(QRect(410, 320, 101, 51))
+            layout = QVBoxLayout(newPage)
+            layout.addWidget(newLabel)
 
     def createAccount(self):
         if not self.passwordInput.text():
@@ -60,10 +82,26 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         file.close()
         passwordcheck = hashlib.sha512(self.loginInput.text().encode('utf-8')).hexdigest()
         if str(passwordcheck) == str(checkhash):
+            checkVaultThread = threading.Thread(target=self.checkVaultChange)
+            checkVaultThread.start()
             self.stackedWidget.setCurrentWidget(self.mainScreen)
         else:
             self.loginErrorLabel.setText("Incorrect password")
 
+    def checkVaultChange(self):
+        currentVault = self.vaultList.currentText()
+        pages = [self.vaultStack.widget(i) for i in range(self.vaultStack.count())]
+        while True:
+            selectedVault = self.vaultList.currentText()
+            if selectedVault != currentVault:
+                for i, page in enumerate(pages):
+                    if page.objectName() == selectedVault:
+                        self.vaultStack.setCurrentIndex(i)
+                        break
+                currentVault = selectedVault
+            else:
+                pass
+            time.sleep(0.2)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
