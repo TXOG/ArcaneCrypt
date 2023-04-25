@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'windowJIjzdT.ui'
+## Form generated from reading UI file 'windowsYfJfQ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.1
 ##
@@ -15,9 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QLabel, QLineEdit,
-    QMainWindow, QPushButton, QSizePolicy, QStackedWidget,
-    QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QLabel,
+    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
+    QStackedWidget, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -278,8 +278,7 @@ class Ui_MainWindow(object):
         self.vaultList = QComboBox(self.menuWidget)
         self.vaultList.setObjectName(u"vaultList")
         self.vaultList.setGeometry(QRect(10, 10, 191, 31))
-        self.vaultList.setStyleSheet(u"/* Set the font family and size */\n"
-"    QComboBox {\n"
+        self.vaultList.setStyleSheet(u"    QComboBox {\n"
 "        font-family: Segoe UI;\n"
 "        font-size: 9pt;\n"
 "        font-weight: bold;\n"
@@ -292,7 +291,6 @@ class Ui_MainWindow(object):
 "        selection-color: #ffffff;\n"
 "    }\n"
 "    \n"
-"    /* Set the background color and gradient */\n"
 "    QComboBox::drop-down {\n"
 "        background-color: #f2f2f2;\n"
 "        border: 1px solid #c9c9c9;\n"
@@ -301,15 +299,12 @@ class Ui_MainWindow(object):
 "        width: 20px;\n"
 "    }\n"
 "    \n"
-"    /* Set the hover and focus background color */\n"
 "    QComboBox:hover, QComboBox:focus {\n"
 "        background-color: #f2f2f2;\n"
 "        border: 1px solid #0078d7;\n"
 "    }\n"
 "    \n"
-"    /* Set the background color and gradient of the dropdown menu */\n"
-"    QComboBox QAbstractItemVi"
-                        "ew {\n"
+"    QComboBox QAbstractItemView {\n"
 "        background-color: #ffffff;\n"
 "        border: 1px solid #c9c9c9;\n"
 "        selection-background-color: #0078d7;\n"
@@ -346,10 +341,10 @@ class Ui_MainWindow(object):
 "    background-color: #808080;\n"
 "    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);\n"
 "}")
-        self.addVaultButton = QPushButton(self.menuWidget)
-        self.addVaultButton.setObjectName(u"addVaultButton")
-        self.addVaultButton.setGeometry(QRect(380, 13, 131, 31))
-        self.addVaultButton.setStyleSheet(u"QPushButton {\n"
+        self.addFileButton = QPushButton(self.menuWidget)
+        self.addFileButton.setObjectName(u"addFileButton")
+        self.addFileButton.setGeometry(QRect(480, 13, 131, 31))
+        self.addFileButton.setStyleSheet(u"QPushButton {\n"
 "    font-family: Segoe UI;\n"
 "    font-size: 12pt;\n"
 "    font-weight: bold;\n"
@@ -377,6 +372,11 @@ class Ui_MainWindow(object):
 "    background-color: #808080;\n"
 "    background-image: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #808080, stop: 1 #4d4d4d);\n"
 "}")
+        self.line = QFrame(self.menuWidget)
+        self.line.setObjectName(u"line")
+        self.line.setGeometry(QRect(420, 0, 20, 61))
+        self.line.setFrameShape(QFrame.VLine)
+        self.line.setFrameShadow(QFrame.Sunken)
         self.vaultStack = QStackedWidget(self.mainScreen)
         self.vaultStack.setObjectName(u"vaultStack")
         self.vaultStack.setGeometry(QRect(0, 49, 971, 621))
@@ -424,7 +424,7 @@ class Ui_MainWindow(object):
         self.loginErrorLabel.setText("")
         self.vaultList.setCurrentText("")
         self.createVaultButton.setText(QCoreApplication.translate("MainWindow", u"Create", None))
-        self.addVaultButton.setText(QCoreApplication.translate("MainWindow", u"Add", None))
+        self.addFileButton.setText(QCoreApplication.translate("MainWindow", u"Add", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Page1", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"page2", None))
     # retranslateUi

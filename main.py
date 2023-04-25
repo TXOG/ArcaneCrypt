@@ -8,7 +8,7 @@ from PySide6.QtWidgets import *
 from PySide6.QtGui import *
 from PySide6.QtWebEngineCore import *
 from PySide6.QtNetwork import QNetworkCookieJar, QNetworkCookie
-from PySide6.QtWidgets import QApplication, QMainWindow, QGraphicsDropShadowEffect, QDialog
+from PySide6.QtWidgets import QApplication, QMainWindow, QGraphicsDropShadowEffect, QDialog, QFileDialog
 from PySide6.QtCore import Qt, QPoint, QRect
 from PySide6 import QtWidgets
 from PySide6.QtWebEngineWidgets import QWebEngineView
@@ -21,6 +21,12 @@ from ui_createvault import Ui_Dialog
 import hashlib
 from os.path import exists
 import threading
+import pathlib
+from pathlib import Path
+import shutil
+import bcrypt
+import base64
+from cryptography.fernet import Fernet
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -30,6 +36,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # Create an instance of the UI from ui_window.py
         self.ui = Ui_MainWindow()
+
+        self.initialdir = pathlib.Path(__file__).parent.absolute()
 
 
         self.vaultStack.removeWidget(self.page)
@@ -43,6 +51,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.createAccountButton.clicked.connect(self.createAccount)
         self.loginButton.clicked.connect(self.login)
         self.createVaultButton.clicked.connect(self.openCreateVaultWindow)
+        self.addFileButton.clicked.connect(self.addFile)
 
         vault_dir = QDir.currentPath() + "/Vaults"
         vault_folders = [f for f in os.listdir(vault_dir) if os.path.isdir(os.path.join(vault_dir, f))]
@@ -65,7 +74,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if self.passwordInput.text() == self.checkPasswordInput.text():
             password = self.passwordInput.text()
             password = password.encode('utf-8')
-            hashed = hashlib.sha512(password).hexdigest()
+            hashed = hashlib.sha512(password).digest()
             file = open('password.ivp', 'w+')
             writehashed = str(hashed)
             file.write(writehashed)
@@ -83,7 +92,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         file = open('password.ivp', 'r')
         checkhash = file.read()
         file.close()
-        passwordcheck = hashlib.sha512(self.loginInput.text().encode('utf-8')).hexdigest()
+        passwordcheck = hashlib.sha512(self.loginInput.text().encode('utf-8')).digest()
         if str(passwordcheck) == str(checkhash):
             checkVaultThread = threading.Thread(target=self.checkVaultChange)
             checkVaultThread.start()
@@ -113,6 +122,67 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         vaultWindow = CreateVault()
         vaultWindow.show()
         return vaultWindow
+
+    def addFile(self):
+        file_dialog = QFileDialog(self)
+        file_dialog.setWindowTitle("Add file to " + self.vaultList.currentText())
+        file_dialog.setFileMode(QFileDialog.ExistingFile)
+        file_dialog.setNameFilter("All Files (*.*)")
+
+        if file_dialog.exec() == QFileDialog.Accepted:
+            filenames = file_dialog.selectedFiles()
+            if len(filenames) > 0:
+                filePath = filenames[0]
+                # find file extension
+                file_extension = pathlib.Path(filePath).suffix
+                # find filename without extension
+                filename = pathlib.Path(filePath).stem
+                # find file name with extenion
+                fullfilename = os.path.basename(filePath)
+                # writes file extension to file
+                namefile = (str(filename) + str('.ive'))
+                file = open(namefile, 'w+')
+                file.write(file_extension)
+                file.close()
+                # moves file to locker folder
+                shutil.move(filePath, "./Vaults/" + self.vaultList.currentText())
+
+                namefile = (str(filename) + str('.ivd'))
+                file = open(namefile, 'w+')
+                file.write("nsp")
+                file.close()
+                # generates a random salt
+                salt = bcrypt.gensalt()
+
+                # writes the salt to a file
+                namefile = (str(filename) + str('.ivs'))
+                file = open(namefile, 'w+')
+                file.write(str(salt))
+                file.close()
+
+                # gets new file path
+                filepath = (str('./Vaults/') + self.vaultList.currentText() + '/' + str(filename) + str(file_extension))
+                originalpassnsalt = (str(self.loginInput.text()) + str(salt))
+                originalpassnsalt = originalpassnsalt.encode('utf-8')
+                # hashes the password and salt to use as a key
+                hashed = hashlib.sha256(originalpassnsalt).digest()
+                key = base64.urlsafe_b64encode(hashed)
+                # creates fernet so encryption can happen
+                fernet = Fernet(key)
+
+                # gets the bytes data of a file and encrypts
+                with open(filepath, "rb") as file:
+                    file_data = file.read()
+                    encrypted_data = fernet.encrypt(file_data)
+                    file.close()
+                # writes to the binary of a file
+                with open(filepath, "wb") as file:
+                    file.write(encrypted_data)
+                    file.close()
+                os.chdir(str(self.initialdir) + '/Vaults/' + self.vaultList.currentText())
+                newfilename = (str(filename) + str('.ivf'))
+                os.rename(fullfilename, newfilename)
+                os.chdir(self.initialdir)
 
 
 class CreateVault(QMainWindow, Ui_Dialog):
